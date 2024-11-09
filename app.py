@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 # Set up OpenAI API key
 client = AsyncOpenAI(
     # This is the default and can be omitted
-    api_key=os.environ.get("OPENAI_API_KEY"),
+    api_key=os.environ.get("sk-YJjcokH-lz-FwTTfHIHGh7wLPIhscQq_yBuQpWeSe7T3BlbkFJW06Cq3DBVG6wZa7sVNnkNCM-RGLhesXm4gGT66Fr4A"),
 )
 
 def get_youtube_id(url):
