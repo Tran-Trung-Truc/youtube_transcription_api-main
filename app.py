@@ -30,8 +30,7 @@ def get_youtube_id(url):
     return video_id.group(1) if video_id else None
 
 def process_transcript(video_id):
-    proxy_address=os.environ.get("PROXY")
-    transcript = YouTubeTranscriptApi.get_transcript(video_id, proxies = {"http": proxy_address,"https": proxy_address})
+    transcript = YouTubeTranscriptApi.get_transcript(video_id, languages= ('vi','en'))
     full_text = ' '.join([entry['text'] for entry in transcript])
     return full_text
 
